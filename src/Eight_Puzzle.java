@@ -36,6 +36,16 @@ public class Eight_Puzzle extends JDialog {
     private JLabel lblPerformance;
     private JTextArea txtPerfom;
     private JLabel lblSetting;
+    private JRadioButton radioBtnCus;
+    private JTextField txtField00;
+    private JTextField txtField01;
+    private JTextField txtField02;
+    private JTextField txtField10;
+    private JTextField txtField11;
+    private JTextField txtField12;
+    private JTextField txtField20;
+    private JTextField txtField21;
+    private JTextField txtField22;
 
     public Eight_Puzzle() {
         setContentPane(contentPane);
@@ -47,6 +57,7 @@ public class Eight_Puzzle extends JDialog {
         bgroup.add(radioBtnEasy);
         bgroup.add(radioBtnMed);
         bgroup.add(radioBtnHard);
+        bgroup.add(radioBtnCus);
 
         ButtonGroup bgroup2 = new ButtonGroup();
         bgroup2.add(radioBtnA1);
@@ -78,6 +89,35 @@ public class Eight_Puzzle extends JDialog {
                     state = new State(MEDIUM,"Root", 0,0,0,false);
                 if(radioBtnHard.isSelected())
                     state = new State(HARD,"Root", 0,0,0,false);
+                if(radioBtnCus.isSelected()){
+
+                    try {
+
+
+                        int[][] temp = new int[3][3];
+
+                        temp[0][0] = Integer.parseInt( txtField00.getText() );
+                        temp[0][1] = Integer.parseInt( txtField01.getText() );
+                        temp[0][2] = Integer.parseInt( txtField02.getText() );
+                        temp[1][0] = Integer.parseInt( txtField10.getText() );
+                        temp[1][1] = Integer.parseInt( txtField11.getText() );
+                        temp[1][2] = Integer.parseInt( txtField12.getText() );
+                        temp[2][0] = Integer.parseInt( txtField20.getText() );
+                        temp[2][1] = Integer.parseInt( txtField21.getText() );
+                        temp[2][2] = Integer.parseInt( txtField22.getText() );
+
+                        state = new State(temp,"Root", 0,0,0,false);
+
+
+                    }catch ( Exception ex ){
+
+                        System.out.print(ex);
+                    }
+
+
+                }
+
+
 
                 //Create Root and Search Object
                 Node root = new Node(state , null);
@@ -250,4 +290,7 @@ public class Eight_Puzzle extends JDialog {
     }
 
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
