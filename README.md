@@ -4,5 +4,5 @@
 
 ## Project Snippet
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-![Screenshot](solver.png)
+![Image of Yaktocat](8-Puzzle-Solver/img/solver.png)
+
