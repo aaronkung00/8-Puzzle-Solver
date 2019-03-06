@@ -5,4 +5,4 @@
 ## Project Snippet
 
 
-solver.png
+8-Puzzle-Solver/img/solver.png
