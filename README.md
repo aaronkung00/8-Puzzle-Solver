@@ -5,4 +5,4 @@
 ## Project Snippet
 
 
-8-Puzzle-Solver/img/solver.png
+![Screenshot](solver.png)
