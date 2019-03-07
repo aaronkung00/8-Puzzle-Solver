@@ -4,5 +4,5 @@
 
 ## Project Snippet
 
-![Image of Yaktocat](https://github.com/aaronkung00/8-Puzzle-Solver/blob/master/img/solver.png)
+![Image of solver](https://github.com/aaronkung00/8-Puzzle-Solver/blob/master/img/solver.png)
 
